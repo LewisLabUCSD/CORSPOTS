@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import requests
 import io
+from time import sleep
 
 def database_dict_builder(proteome_id, query_item, split_str):
     BASE = 'http://www.uniprot.org/uniprot/'
