@@ -16,6 +16,6 @@ Implementation of COR-SPOTS procedures can be found in the numerically ordered n
 
 ## Notes to the reader
 
-We do not provide all of the data in this repository. This repository acts as a representaion of produces taken during the COR-SPOTS workflow and allows for analogous studies to be conducted. Please contact us regarding questions about the data for this study.
+We do not provide all of the data in this repository. This repository acts as a representaion of procedures taken during the COR-SPOTS workflow and allows for analogous studies to be conducted. Please contact us regarding questions about the data for this study.
 
 Public query of STRING-DB through HTTP requests can take some time. As stated in the STRING-DB docs you may download the entire dataset by signing the academic license agreement.
