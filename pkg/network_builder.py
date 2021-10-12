@@ -1,7 +1,9 @@
 import numpy as np
 import pandas as pd
+import io
 from time import sleep
 import networkx as nx
+import requests
 import community
 import multiprocessing as mp
 import itertools
