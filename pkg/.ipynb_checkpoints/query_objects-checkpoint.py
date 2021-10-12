@@ -38,7 +38,13 @@ class Protein:
                 return None
         def kegg_search(kegg_id):
             BASE = 'http://rest.kegg.jp/link/pathway/'
-            result = requests.get(BASE+kegg_id)
+            success = False
+            while not success:
+                try:
+                    result = requests.get(BASE+kegg_id)
+                    success = True
+                except:
+                    sleep(.25)
             urlData = result.content
             try:
                 rawData = pd.read_csv(io.StringIO(result.content.decode('utf-8')), sep='\t', header=None)

@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 
-def plot_kmeans(values, k_start=1, k_end=20):
+def plot_kmeans(values, k_start=1, k_end=20, save=False):
     scaler = StandardScaler()
     scaler.fit(values)
     scaled_values = scaler.transform(values).T
@@ -20,7 +20,10 @@ def plot_kmeans(values, k_start=1, k_end=20):
     plt.title('K-Means Fit')
     plt.xticks(range(k_start,k_end+1))
     plt.tight_layout()
-    plt.show()
+    if save:
+        plt.savefig('kmeans_elbow.pdf')
+    else:
+        plt.show()
     
 def kmeans_clustering(values, k):
     scaler = StandardScaler()
